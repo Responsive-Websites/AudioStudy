@@ -1,0 +1,216 @@
+.header {
+  font-family: 'Raleway', sans-serif;
+  background-color: #1f4bb0;
+  &__container {
+    max-width: 1856px;
+    margin: 0 auto;
+    box-sizing: content-box;
+    padding: 0px 32px;
+    @media screen and (max-width: 1024px) {
+      padding: 0px 15px;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template: auto / repeat(2, 1fr);
+    align-items: center;
+    column-gap: 30px;
+    padding: 18px 0px;
+    @media screen and (max-width: 1024px) {
+      column-gap: 15px;
+      padding: 12px 0px;
+    }
+    @media screen and (max-width: 480px) {
+      padding: 5px 0px;
+    }
+  }
+
+  &__logo {
+    justify-self: start;
+  }
+
+  &__control {
+    justify-self: end;
+  }
+}
+.logo-header {
+  display: grid;
+  column-gap: 16px;
+  grid-template: auto / repeat(2, auto);
+  align-items: center;
+
+  @media screen and (max-width: 1024px) {
+    column-gap: 10px;
+  }
+
+  &__img {
+    width: 52px;
+    & img {
+      width: 100%;
+    }
+    @media screen and (max-width: 1024px) {
+      width: 35px;
+    }
+    @media screen and (max-width: 375px) {
+      width: 40px;
+    }
+  }
+
+  &__text {
+    color: #ffffff;
+
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    @media screen and (max-width: 1024px) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: 375px) {
+      display: none;
+    }
+  }
+}
+.control-header {
+  display: grid;
+  grid-template: auto / repeat(2, auto);
+  align-items: center;
+  column-gap: 48px;
+  @media screen and (max-width: 1024px) {
+    column-gap: 30px;
+  }
+  @media screen and (max-width: 768px) {
+    column-gap: 12px;
+  }
+  &__buttons {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+
+    column-gap: 16px;
+
+    @media screen and (max-width: 768px) {
+      grid-template: auto / repeat(1, auto);
+      position: absolute;
+      top: -100%;
+      left: 0;
+      background-color: #1f4bb0;
+      width: 100%;
+      padding: 40px 40px;
+      border-radius: 0px 0px 20px 20px;
+      row-gap: 50px;
+      transition: top 0.3s ease 0s;
+      overflow: auto;
+
+      &.active {
+        top: 0;
+      }
+    }
+  }
+  &__registration-btn {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 94%;
+    letter-spacing: 0.05em;
+
+    transition: all 0.4s ease 0s;
+
+    &:hover {
+      text-decoration: underline;
+    }
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      font-size: 22px;
+    }
+  }
+
+  &__signin-btn {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+
+    outline: 1px solid #ffffff;
+    border-radius: 6px;
+    padding: 15px 30px;
+    transition: all 0.4s ease 0s;
+    text-align: center;
+    &:hover {
+      background-color: #ffffff;
+      color: #1f4bb0;
+      outline: none;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 22px;
+    }
+  }
+
+  &__button-burger {
+    display: none;
+    @media screen and (max-width: 768px) {
+      display: block;
+      position: relative;
+
+      width: 46px;
+      height: 30px;
+      cursor: pointer;
+
+      & span,
+      &::before,
+      &::after {
+        right: 50%;
+        position: absolute;
+        height: 10%;
+        width: 63%;
+        transition: all 0.3s ease 0s;
+        background-color: #ffffff;
+        border-radius: 20px;
+        transform: translate(50%, 0);
+      }
+      &::before,
+      &::after {
+        content: '';
+      }
+      &::before {
+        top: 16%;
+      }
+      &::after {
+        bottom: 16%;
+      }
+      & span {
+        top: 50%;
+        transform: scale(1) translate(50%, -50%);
+      }
+    }
+    &.active {
+      position: absolute;
+      right: 0;
+      margin-right: 10px;
+      & span {
+        transform: scale(0) translate(0px, 50%);
+      }
+      &::before {
+        top: 103%;
+        transform: rotate(-45deg) translate(80%, -50%);
+      }
+      &::after {
+        bottom: 103%;
+        transform: rotate(45deg) translate(80%, 50%);
+      }
+    }
+  }
+
+  &__search-btn {
+    width: 24px;
+
+    & img {
+      width: 100%;
+    }
+    @media screen and (max-width: 1024px) {
+      margin-right: 15px;
+      box-sizing: content-box;
+      padding: 10px;
+    }
+  }
+}

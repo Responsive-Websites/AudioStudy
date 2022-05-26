@@ -2,7 +2,13 @@
 <html lang="en">
   @@include('html/head.html', { "title":"AudioStudy" })
   <body>
-    @@include('html/header.html', {}) @@include('html/footer.html', {})
+    <div class="wrapper">
+      @@include('html/header.html', {})
+      <!-- main -->
+      @@include('html/main.html', {})
+      <!-- main-end -->
+      @@include('html/footer.html', {})
+    </div>
     <script src="js/app.min.js"></script>
   </body>
 </html>

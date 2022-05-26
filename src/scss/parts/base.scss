@@ -1,6 +1,6 @@
 body {
   font-family: CirceRounded;
-  font-size: 66px;
+  font-size: 14px;
   font-weight: 400;
   color: #415268;
 }
@@ -8,4 +8,25 @@ body {
 .wrapper {
   min-height: 100%;
   overflow: hidden;
+
+  display: grid;
+  grid-template: auto 1fr auto / 1fr;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+}
+
+header {
+  grid-area: header;
+}
+main {
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+}
+.container {
+  max-width: 1290px;
+  margin: 0 auto;
 }
