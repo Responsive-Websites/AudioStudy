@@ -94,6 +94,7 @@
       position: absolute;
       top: -100%;
       left: 0;
+      z-index: 1;
       background-color: #1f4bb0;
       width: 100%;
       padding: 40px 40px;
@@ -186,6 +187,7 @@
     &.active {
       position: absolute;
       right: 0;
+      z-index: 100;
       margin-right: 10px;
       & span {
         transform: scale(0) translate(0px, 50%);
