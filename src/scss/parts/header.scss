@@ -184,6 +184,7 @@
         transform: scale(1) translate(50%, -50%);
       }
     }
+    transition: all 0.5s ease 0s;
     &.active {
       position: absolute;
       right: 0;
