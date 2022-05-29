@@ -46,6 +46,15 @@
     @media screen and (max-width: 768px) {
       margin-top: 80px;
     }
+  }
+  &__partners {
+    margin-top: 161px;
+    @media screen and (max-width: 1024px) {
+      margin-top: 130px;
+    }
+    @media screen and (max-width: 768px) {
+      margin-top: 80px;
+    }
     @media screen and (max-width: 480px) {
       margin-top: 64px;
     }
@@ -797,6 +806,87 @@
     @media screen and (max-width: 768px) {
       max-width: 408px;
       width: 100%;
+    }
+  }
+}
+
+.partners {
+  &__label {
+    text-align: center;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 67%;
+    color: #383838;
+    letter-spacing: 0.05em;
+
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
+  }
+
+  &__inner {
+    margin-top: 64px;
+    @media screen and (max-width: 480px) {
+      margin-top: 0px;
+    }
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 20px;
+    }
+    @media screen and (max-width: 480px) {
+      display: block;
+    }
+  }
+  &__lines {
+    display: grid;
+    grid-template-columns: minmax(auto, 58px) 1fr minmax(auto, 58px);
+    display: none;
+
+    @media screen and (max-width: 480px) {
+      display: grid;
+    }
+  }
+  &__line {
+    margin-top: 48px;
+    border: 2px solid #b7c4d6;
+    border-radius: 20px;
+    &:nth-child(2) {
+      border: 2px solid #ff7448;
+      position: relative;
+    }
+    &:nth-child(1) {
+      margin-right: -5px;
+    }
+    &:nth-child(3) {
+      margin-left: -5px;
+    }
+  }
+  &__item {
+    padding: 0px 20px;
+    cursor: pointer;
+    @media screen and (max-width: 1024px) {
+      width: 90%;
+    }
+    @media screen and (max-width: 768px) {
+      width: 70%;
+    }
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
+    &_mobile {
+      @media screen and (max-width: 480px) {
+        display: block;
+        padding: 0;
+        max-width: 328px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0px 40px;
+      }
     }
   }
 }
